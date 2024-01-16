@@ -1,31 +1,7 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +10,240 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+:root {
+  --blue-light: #3498db;
+  --blue-medium: #2980b9;
+  --blue-dark: #24509C;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #eeecee;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 80px;
+  margin: auto;
+  max-width: 60%;
+  width: 100%;
+}
+
+.big-heading {
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  height: 100%;
+}
+
+.left-container, .right-container {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  aspect-ratio: 4/4;
+}
+
+.right-container {
+  gap: 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.cta-btn {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  padding: 16px 32px;
+  color: var(--blue-light);
+  background-color: transparent;
+  border: 2px solid var(--blue-light);
+  border-radius: 99px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 300ms border color;
+}
+
+.primary-btn:hover {
+  border: 2px solid var(--blue-dark);
+  color: var(--blue-dark);
+}
+
+.primary-btn.selected {
+  background-color: var(--blue-dark);
+  border: 1px solid var(--blue-dark);
+  color: white;
+}
+
+.cta-btn-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cta-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.map-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.accessorise-container, .style-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leg, .neck, .nose, .mouth, .eyes, .hair, .ears, .accessories {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.hair {
+  z-index: 1;
+}
+
+.eyes {
+  z-index: 2;
+}
+
+.blue-50 {
+  background-image: url('/public/backgrounds/blue50.png');
+}
+
+.blue-60 {
+  background-image: url('/public/backgrounds/blue60.png');
+}
+
+.blue-70 {
+  background-image: url('/public/backgrounds/blue70.png');
+}
+
+.dark-blue-30 {
+  background-image: url('/public/backgrounds/darkblue30.png');
+}
+
+.dark-blue-50 {
+  background-image: url('/public/backgrounds/darkblue50.png');
+}
+
+.dark-blue-70 {
+  background-image: url('/public/backgrounds/darkblue70.png');
+}
+
+.green-50 {
+  background-image: url('/public/backgrounds/green50.png');
+}
+
+.green-60 {
+  background-image: url('/public/backgrounds/green60.png');
+}
+
+.green-70 {
+  background-image: url('/public/backgrounds/green70.png');
+}
+
+.grey-40 {
+  background-image: url('/public/backgrounds/grey40.png');
+}
+
+.grey-70 {
+  background-image: url('/public/backgrounds/grey70.png');
+}
+
+.grey-80 {
+  background-image: url('/public/backgrounds/grey80.png');
+}
+
+.red-50 {
+  background-image: url('/public/backgrounds/red50.png');
+}
+
+.red-60 {
+  background-image: url('/public/backgrounds/red60.png');
+}
+
+.red-70 {
+  background-image: url('/public/backgrounds/red70.png');
+}
+
+.yellow-50 {
+  background-image: url('/public/backgrounds/yellow50.png');
+}
+
+.yellow-60 {
+  background-image: url('/public/backgrounds/yellow60.png');
+}
+
+.yellow-70 {
+  background-image: url('/public/backgrounds/yellow70.png');
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    /* overflow-x: hidden; */
+  }
+
+  .big-heading { 
+    font-size: 48px;
+    max-width: 60%;
+  }
+
+  .inner-container {
+    flex-wrap: wrap;
+  }
+
+  .left-container, .right-container {
+    flex: 0 0 calc(100% - 40px);
   }
 }
